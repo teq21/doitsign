@@ -1,0 +1,3 @@
+//org.eclipse.cft.moduleMapping\:sdb00_sdb00_dev@https\://api.paas-ta.org=
+eclipse.preferences.version=1
+org.eclipse.cft.server.core.selfsigned.certificate={"servers"\:{"https\://api.paas-ta.org"\:true}}

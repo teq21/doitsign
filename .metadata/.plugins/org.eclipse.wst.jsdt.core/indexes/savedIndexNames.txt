@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\paasta_doitsign\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3332596478.index
+3924251135.index
+3855411376.index
+3491153085.index
+3482255855.index
+2782760250.index

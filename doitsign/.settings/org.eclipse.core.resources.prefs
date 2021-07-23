@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//src/poly/controller/NoticeController.java=UTF-8
+encoding//src/poly/persistance/mapper/INoticeMapper.java=UTF-8
+encoding//src/poly/service/impl/NoticeService.java=UTF-8

@@ -1,0 +1,7 @@
+---
+applications:
+- name: pasdis
+  memory: 1024M
+  host: pasdis
+  domain: paas-ta.org
+  buildpack: java_buildpack

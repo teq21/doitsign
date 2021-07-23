@@ -1,0 +1,7 @@
+---
+applications:
+- name: doitsign
+  memory: 1024M
+  host: doitsign
+  domain: paas-ta.org
+  buildpack: java_buildpack

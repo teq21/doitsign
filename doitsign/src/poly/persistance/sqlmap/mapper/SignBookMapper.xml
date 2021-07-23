@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="poly.persistance.mapper.ISignBookMapper">
+
+	<!-- 리스트 불러오는 쿼리  : 페이징과 연계-->
+	<select id="getSignBookList" resultType="SignBookDTO">
+		SELECT * FROM SIGNBOOK_INFO
+		WHERE POST_NO BETWEEN #{start} AND #{end}
+	</select>
+
+
+	<!-- 페이징 쿼리 -->
+	<select id="getSignBookListCnt" resultType="Integer">
+		SELECT COUNT(1) FROM SIGNBOOK_INFO
+	</select>
+	
+</mapper>

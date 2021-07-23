@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="poly.persistance.mapper.IStudyMapper">
+
+<select id="getStudyList" resultType="StudyDTO">
+SELECT * FROM STUDY_INFO
+WHERE POST_NO BETWEEN #{start} AND #{end}
+</select>
+
+<insert id="doStudyForm" parameterType="StudyDTO">
+INSERT INTO STUDY_INFO(
+
+	REG_ID,
+	POST_TITLE,
+	POST_CONTENT,
+	FILE_PATH
+	
+)VALUES(
+	
+	#{reg_id},
+	#{post_title},
+	#{post_content},
+	#{file_path}
+	
+)
+</insert>
+
+
+<select id="getStudyDetail" parameterType="StudyDTO" resultType="StudyDTO">
+SELECT
+	POST_NO,
+	POST_TITLE,
+	POST_CONTENT,
+	REG_ID,
+	REG_DT,
+	FILE_PATH
+FROM
+	STUDY_INFO
+WHERE
+	POST_NO = #{post_no}
+</select>
+
+<update id="updateStudyDetail" parameterType="studyDTO">
+UPDATE STUDY_INFO
+SET
+	POST_TITLE = #{post_title},
+	POST_CONTENT = #{post_content},
+	FILE_PATH= #{file_path}
+WHERE
+	POST_NO = #{post_no}
+</update>
+
+<delete id="deleteStudyDetail" parameterType="studyDTO">
+DELETE FROM STUDY_INFO
+WHERE
+	POST_NO = #{post_no}
+</delete>
+
+<select id="getStudyListCnt" resultType="Integer">
+SELECT COUNT(1) FROM STUDY_INFO
+</select>
+
+</mapper>
